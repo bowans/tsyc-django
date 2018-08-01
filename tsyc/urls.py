@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 import main.views
+import event.views
 
 urlpatterns = [
     path('', main.views.index, name='index'),
+    path('event/', event.views.event, name='event'),
     path('admin/', admin.site.urls),
 ]

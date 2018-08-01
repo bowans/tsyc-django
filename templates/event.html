@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %} | 音樂會列表 {% endblock %}
+
+{% block content %}
+
+<div class="container" id="content">
+  <div class="row">
+
+    <!-- Main Content -->
+    <div class="col-12" id="main">
+      <div class="row-6">
+        音樂會列表：
+      </div>
+      {% for event in events %}
+      <div class="row-6">
+        {{ event.name }}
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
