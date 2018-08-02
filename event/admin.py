@@ -1,6 +1,14 @@
 from django.contrib import admin
-from .models import Event
+from .models import Event, EventImage
 
 # Register your models here.
 
-admin.site.register(Event)
+
+class EventImageInline(admin.TabularInline):
+    model = EventImage
+    extra = 0
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ['name', 'date']
+    inlines = [EventImageInline]
