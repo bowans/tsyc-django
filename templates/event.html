@@ -9,22 +9,19 @@
   <div class="row masonry">
 
     <!-- Main Content -->
-
     {% for event in events_dict %}
-      {% if event.cover.count > 0 %}
-        <div class="col-md-4 item">
-          <img src="{{ event.cover.0.image.url }}" alt="" class="img-fluid">
-          {{ event.name }}
-        </div>
-      {% else %}
-        <div class="col-md-4 item">
-          {{ event.name }}
-        </div>
-      {% endif %}
+      <div class="col-md-4 item text-center">
+        {% if event.cover.count > 0 %}
+          <img src="{{ event.cover.0.image.url }}" class="img-fluid">
+        {% else %}
+          <img src="{% static 'no-image.jpg' %}" class="img-fluid">
+        {% endif %}
+        {{ event.name }}
+      </div>
     {% empty %}
-    <div class="col-md-4 item">
-      沒有音樂會資料
-    </div>
+      <div class="col-md-4 item">
+        沒有音樂會資料
+      </div>
     {% endfor %}
 
   </div>
