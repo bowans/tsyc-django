@@ -6,19 +6,23 @@
 {% block content %}
 
 <div class="container" id="content">
-  <div class="row">
+  <div class="row masonry">
 
     <!-- Main Content -->
-    <div class="col-12" id="main">
-      <div class="row-6">
-        音樂會列表：
-      </div>
-      {% for event in events %}
-      <div class="row-6">
+    {% for event in events_dict %}
+      <div class="col-md-4 item text-center">
+        {% if event.cover.count > 0 %}
+          <img src="{{ event.cover.0.image.url }}" class="img-fluid">
+        {% else %}
+          <img src="{% static 'no-image.jpg' %}" class="img-fluid">
+        {% endif %}
         {{ event.name }}
       </div>
-      {% endfor %}
-    </div>
+    {% empty %}
+      <div class="col-md-4 item">
+        沒有音樂會資料
+      </div>
+    {% endfor %}
 
   </div>
 </div>

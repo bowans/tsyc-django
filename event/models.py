@@ -18,4 +18,5 @@ class Event(models.Model):
 
 class EventImage(models.Model):
     image = models.ImageField(upload_to='event/')
-    event_id = models.ForeignKey('Event', on_delete=models.CASCADE)
+    event_id = models.ForeignKey('Event', on_delete=models.CASCADE, related_name='images')
+    is_cover = models.BooleanField(default=False)
