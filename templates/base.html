@@ -1,4 +1,7 @@
 <!doctype html>
+
+{% load staticfiles %}
+
 <html lang="zh-Hant-TW">
   <head>
     <!-- Required meta tags -->
@@ -18,10 +21,10 @@
       .item { margin-bottom: 15px; margin-top: 15px; color: #BBBBBB;}
     </style>
 
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
     <title> 台北市松韻合唱團 {% block title %}{% endblock %} </title>
   </head>
   <body>
-    {% load staticfiles %}
 
     <!-- Header -->
     <div class="container-fluid" id="header">
