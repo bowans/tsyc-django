@@ -3,20 +3,35 @@
 
 {% block content %}
 
-<div class="container" id="content">
-  <div class="row">
-
-    <!-- Main Content -->
-    <div class="col-12" id="main">
-      <div class="row-12 justify-content-center">
-        <img class="img-fluid img-thumbnail" src="{% static 'ND7_7749.jpg'%}">
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url('{% static "ND7_7749.jpg" %}')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Taipei Song-Yung Choir</h3>
+          <p>永不褪色的合聲</p>
+        </div>
       </div>
-      <div class="row-12">
-        Taipei Song-Yung Choir ── 永不褪色的合聲
+      <div class="carousel-item" style="background-image: url('{% static "frontier-drifting-cover.png" %}')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3></h3>
+          <p></p>
+        </div>
       </div>
     </div>
-
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-</div>
+</header>
 
 {% endblock %}
