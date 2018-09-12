@@ -10,7 +10,7 @@
 
     <!-- Main Content -->
     {% for event in events_dict %}
-      <div class="col-sm-6 col-md-4 item text-center">
+      <div class="col-sm-6 col-md-4 item text-center" onclick="location.href='/event/{{ event.id }}'">
         {% if event.cover.count > 0 %}
           <img src="{{ event.cover.0.image.url }}" class="img-fluid">
         {% else %}
