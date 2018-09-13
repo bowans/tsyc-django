@@ -5,26 +5,28 @@
 
 {% block content %}
 
-<div class="container" id="content">
-  <div class="row masonry">
+<main>
+  <div class="container" id="content">
+    <div class="row masonry">
 
-    <!-- Main Content -->
-    {% for event in events_dict %}
-      <div class="col-sm-6 col-md-4 item text-center">
-        {% if event.cover.count > 0 %}
-          <img src="{{ event.cover.0.image.url }}" class="img-fluid">
-        {% else %}
-          <img src="{% static 'no-image.jpg' %}" class="img-fluid">
-        {% endif %}
-        {{ event.name }}
-      </div>
-    {% empty %}
-      <div class="col-md-4 item">
-        沒有音樂會資料
-      </div>
-    {% endfor %}
+      <!-- Main Content -->
+      {% for event in events_dict %}
+        <div class="col-sm-6 col-md-4 item text-center" onclick="location.href='/event/{{ event.id }}'">
+          {% if event.cover.count > 0 %}
+            <img src="{{ event.cover.0.image.url }}" class="img-fluid">
+          {% else %}
+            <img src="{% static 'no-image.jpg' %}" class="img-fluid">
+          {% endif %}
+          <p> {{ event.name }} </p>
+        </div>
+      {% empty %}
+        <div class="col-md-4 item">
+          沒有音樂會資料
+        </div>
+      {% endfor %}
 
+    </div>
   </div>
-</div>
+</main>
 
 {% endblock %}
