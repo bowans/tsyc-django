@@ -16,6 +16,4 @@ def event_detail(request, id):
     except ObjectDoesNotExist:
         raise Http404
 
-    response = HttpResponse()
-    response.write(event.name)
-    return response
+    return render(request, 'event_detail.html', locals())
