@@ -56,19 +56,8 @@
       </div>
     </nav>
 
-    <!-- Header >
-    <header>
-      <div class="container-fluid" id="header">
-        <div class="row justify-content-center">
-          <a href="/">
-              <img class="img-fluid" src="{% static 'logo.jpg'%}">
-          </a>
-        </div>
-      </div>
-    </header-->
-
-    <!-- Content -->
-    {% block content %}{% endblock %}
+    <!-- Content, may contain header or main -->
+    {% block content %} {% endblock %}
 
     <!-- Footer -->
     <footer class="container-fluid">
