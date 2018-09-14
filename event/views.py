@@ -6,7 +6,8 @@ from django.core.exceptions import ObjectDoesNotExist
 
 def event_list(request):
     events = Event.objects.all().order_by('-date')
-    events_dict = [{'name': event.name, 'cover': event.images.filter(is_cover=True)[:1], 'id': event.id} for event in events]
+    events_dict = [{'name': event.name, 'cover': event.images.filter(is_cover=True)[:1], 'id': event.id} for event in
+                   events]
     return render(request, 'event.html', locals())
 
 
