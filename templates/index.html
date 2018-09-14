@@ -1,8 +1,19 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block content %}
+{% block extend_head %}
+<style type="text/css">
+	#carousel-item-1 {
+		background-image: url("{% static 'ND7_7749.jpg' %}");
+	}
 
+	#carousel-item-2 {
+		background-image: url("{% static 'frontier-drifting-cover.png' %}");
+	}
+</style>
+{% endblock %}
+
+{% block content %}
 <header>
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -10,27 +21,17 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active" style="background-image: url('{% static " ND7_7749.jpg
-			" %}')">
-			<div class="carousel-caption d-none d-md-block">
-			</div>
+			<div class="carousel-item active" id="carousel-item-1"></div>
+			<div class="carousel-item" id="carousel-item-2"></div>
 		</div>
-		<div class="carousel-item" style="background-image: url('{% static " frontier-drifting-cover.png
-		" %}')">
-		<div class="carousel-caption d-none d-md-block">
-			<h3></h3>
-			<p></p>
-		</div>
-	</div>
-	</div>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
 	</div>
 </header>
 
@@ -38,5 +39,4 @@
 	<h2>Taipei Song-Yung Choir</h2>
 	<h3>永不褪色的合聲</h3>
 </main>
-
 {% endblock %}

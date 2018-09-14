@@ -18,6 +18,8 @@
 	<link rel="icon" href="{% static 'ico-32x32.png' %}" sizes="32x32"/>
 	<link rel="icon" href="{% static 'ico-128x128.png' %}" sizes="128x128"/>
 	<title> 台北市松韻合唱團 {% block title %}{% endblock %} </title>
+
+	{% block extend_head %}{% endblock %}
 </head>
 <body>
 <!-- Navigation -->
