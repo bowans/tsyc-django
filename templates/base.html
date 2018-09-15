@@ -25,7 +25,7 @@
 <!-- Navigation -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
-		<a class="navbar-brand" href="/">台北市松韻合唱團</a>
+		<a class="navbar-brand" href={% url 'index' %}>台北市松韻合唱團</a>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 						data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 						aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/event">演出活動</a>
+					<a class="nav-link" href="{% url 'event_list' %}">演出活動</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/sponser">松韻之友</a>
