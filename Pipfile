@@ -10,6 +10,7 @@ django-heroku = "*"
 pillow = "*"
 django-storages = "*"
 "boto3" = "*"
+pre-commit = "*"
 
 [dev-packages]
 
