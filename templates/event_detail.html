@@ -12,20 +12,30 @@
 		<article> {{ event.description|linebreaks }}</article>
 		<h2> 演出日期 </h2>
 		<h3> {{ event.date }} </h3>
+		{% if event.address %}
 		<h2> 演出地點 </h2>
 		<h3> {{ event.address|linebreaks }} </h3>
+		{% endif %}
+		{% if event.artist %}
 		<h2> 演出者 </h2>
 		<h3> {{ event.artist|linebreaks }} </h3>
+		{% endif %}
+		{% if event.music %}
 		<h2> 演出曲目 </h2>
 		<h3> {{ event.music|linebreaks }} </h3>
+		{% endif %}
 		{% if event.organizer %}
 		<h2> 主辦單位 </h2>
 		<h3> {{ event.organizer|linebreaks }} </h3>
 		{% endif %}
+		{% if event.price %}
 		<h2> 票價 </h2>
+		{% endif %}
 		<h3> {{ event.price|linebreaks }} </h3>
+		{% if event.url %}
 		<h2> 購票網址 </h2>
 		<h3><a href="{{ event.url }}"> 兩廳院售票系統 </a></h3>
+		{% endif %}
 	</div>
 </main>
 
