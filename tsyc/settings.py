@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,4 +132,9 @@ AWS_MEDIA_LOCATION = 'media'
 MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, AWS_MEDIA_LOCATION)
 DEFAULT_FILE_STORAGE = 'tsyc.aws_storages.MediaStorage'
 
-django_heroku.settings(locals(), staticfiles=False)
+
+try:
+    import django_heroku
+    django_heroku.settings(locals(), staticfiles=False)
+except ImportError:
+    pass
