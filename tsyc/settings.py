@@ -132,6 +132,7 @@ AWS_MEDIA_LOCATION = 'media'
 MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, AWS_MEDIA_LOCATION)
 DEFAULT_FILE_STORAGE = 'tsyc.aws_storages.MediaStorage'
 
+AWS_DEFAULT_ACL = None
 
 try:
     import django_heroku
