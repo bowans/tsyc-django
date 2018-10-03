@@ -1,11 +1,4 @@
-# tsyc-django
+## tsyc-django
+[![Build Status](https://travis-ci.org/bowans/tsyc-django.svg?branch=master)](https://travis-ci.org/bowans/tsyc-django)
 
-Production
-- https://tsyc.herokuapp.com/
-
-Development
-- https://tsyc-dev.herokuapp.com/
-
-Working on
-- https://tsyc.herokuapp.com/event/
-- https://tsyc-dev.herokuapp.com/event/
+https://tsyc.herokuapp.com/
