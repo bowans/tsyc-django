@@ -11,6 +11,7 @@ pillow = "*"
 django-storages = "*"
 "boto3" = "*"
 pre-commit = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
